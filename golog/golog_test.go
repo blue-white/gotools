@@ -1,11 +1,11 @@
 package golog_test
 
 import (
-	"gotools/golog"
+	"github.com/blue-white/gotools/golog"
 	"testing"
 )
 
-func TestCommon(t *testing.T) {
+func TestGolog(t *testing.T) {
 	debug := golog.NewLogger(golog.Debug)
 	debug.Debug("debug level: debug")
 	debug.Info("debug level: info")
@@ -31,10 +31,4 @@ func TestCommon(t *testing.T) {
 	off.Info("off level: info")
 	off.Error("off level: error")
 	off.Fatal("off level: fatal")
-}
-
-func TestFatal(t *testing.T) {
-	debug := golog.NewLogger(golog.Debug)
-	debug.Fatal("debug level: fatal")
-	debug.Error("debug level: error")
 }
